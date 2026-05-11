@@ -39,12 +39,12 @@ def main():
     screen_in_item = Gtk.MenuItem(label="increase brightness")
     screen_in_item.add_events(Gdk.EventMask.BUTTON_PRESS_MASK)
 
-    screen_in_item.connect("activate", run_command,  'ddcutil setvcp 10 + 5 ; echo "/n Increase +5"')
+    screen_in_item.connect("activate", run_command,  'ddcutil setvcp 10 + 10 ; echo "/n Increase +5"')
 
     menu.append(screen_in_item)
     # I'm add a screen decrease object
     screen_de_item = Gtk.MenuItem(label="decrease brightness")
-    screen_de_item.connect('activate', run_command, 'ddcutil setvcp 10 - 5 ; echo "/n Decrease -5"')
+    screen_de_item.connect('activate', run_command, 'ddcutil setvcp 10 - 10 ; echo "/n Decrease -5"')
     menu.append(screen_de_item)
 
     # Add a quit item
